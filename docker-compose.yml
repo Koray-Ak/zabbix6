@@ -66,18 +66,20 @@ services:
       - ZBX_SERVER_PORT=10051
       - ZBX_SERVER_NAME=zabbix-server
     volumes:
-      - www:/usr/share
+      - www:/usr/share/zabbix
       - letsencrypt:/etc/letsencrypt
-      - apache2:/etc/apache2
+      - sites-enabled:/etc/apache2/sites-enabled
+      - zabbix:/etc/zabbix
     depends_on:
       - mysql
-
 volumes: 
-  mysql:
-    external: true
   www:
     external: true
-  apache2:
-    external: true
   letsencrypt:
-    external: true 
+    external: true
+  sites-enabled:
+    external: true
+  zabbix:
+    external: true
+  mysql:
+    external: true
