@@ -3,9 +3,13 @@
 1-Before executed the command docker-compose.yml,Create volume for mysql and zabbix-frontend containers
 
 docker volume create mysql
+
 docker volume create letsencrypt
+
 docker volume create sites-enabled
+
 docker volume create zabbix
+
 docker volume create www
 
 2-Running this command docker-compose.yml up -d
