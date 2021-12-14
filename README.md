@@ -1,6 +1,7 @@
 # zabbix6 Configuration
 
 1-Before executed the command docker-compose.yml,Create volume for mysql and zabbix-frontend containers
+
 docker volume create mysql
 docker volume create letsencrypt
 docker volume create sites-enabled
