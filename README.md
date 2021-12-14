@@ -23,12 +23,18 @@ docker run -it --rm --name certbot \
 
 Answers : 2, yourmailaddress, Y, N, yourdomainname, /usr/share/zabbix
 
-4-Just once login zabbix-frontend container 
+4-Just once login zabbix-frontend container
+
 docker exec -u root -it zabbix-frontend bash
-	chown -R zabbix:zabbix /etc/letsencrypt/
-	cd /etc/apache2/sites-enabled/
-	ln -s /etc/zabbix/apache_ssl.conf zabbix_ssl.conf
-	chown -h zabbix:zabbix zabbix_ssl.conf
+
+chown -R zabbix:zabbix /etc/letsencrypt/
+
+cd /etc/apache2/sites-enabled/
+
+ln -s /etc/zabbix/apache_ssl.conf zabbix_ssl.conf
+
+chown -h zabbix:zabbix zabbix_ssl.conf
+
 exit
 
 5-Edit for letsencrypt configuration
