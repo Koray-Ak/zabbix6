@@ -12,7 +12,7 @@ docker volume create zabbix
 
 docker volume create www
 
-2-Running this command docker-compose.yml up -d
+2-Running this command docker-compose up -d
 
 3- Running this command for Letsencrypt
 
